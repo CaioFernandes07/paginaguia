@@ -1,8 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#titulo{
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 20px;
+
+    color: rgb(0, 0, 0);
+
+    top: 144px;
+}
 
 
 h4{
     font-family: Arial, Helvetica, sans-serif;
-    color: black;
+    color: rgb(0, 0, 0);
+}
+
+#check {
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.774);
+
+
 }
 
 .d-flex { 
@@ -28,41 +53,71 @@ h4{
 }
 
 #cpf {
-    
-    background-color: rgb(255, 255, 255);
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    background-color: white;
+
     border-radius: 5px;
-    padding: 5px 10px;
+
+    padding: 7px 10px;
+
     color: black;
+
     font-size: 15px;
-    border: none;
-    width: 400px;
-    top: 268px;
+
     border: 1px solid rgba(0, 0, 0, 0.295);
+    
+    top: 0vh;
+
+    margin: 10px 15px;
+
+    width: 100%;
+
+    margin-right: auto;
+
+    margin-left: auto;
+
+
+    
 }
 
 #senha {
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
     color: black;
 
     background-color: white;
 
     border-radius: 5px;
 
-    padding: 5px 10px;
+    padding: 7px 10px;
 
     color: black;
 
     font-size: 15px;
 
     border: 1px solid rgba(0, 0, 0, 0.295);
-
-    width: 400px;
     
     top: 0vh;
+
+    margin: 10px 15px;
+
+    width: 100%;
+
+    margin-right: auto;
+
+    margin-left: auto;
+
+    
 }
 
 #BtnLogin {
 
     /*width: -webkit-fill-available;*/
+
+    position: absolute;
 
     font-family: Arial, Helvetica, sans-serif;
 
@@ -78,7 +133,7 @@ h4{
 
     border: 1px solid rgba(0, 0, 0, 0.295);
 
-    margin: 10px 0px;
+    margin: -15px 15px;
 
     justify-content: end;
 
@@ -86,7 +141,7 @@ h4{
 
     align-items: flex-end;
 
-    right: 10px;
+    right: 0;
 
 
     
@@ -99,17 +154,6 @@ h4{
     color: black;
 
     top: 280px;
-}
-
-#titulo{
-
-    font-family: Arial, Helvetica, sans-serif;
-
-    font-size: 20px;
-
-    color: black;
-
-    top: 144px;
 }
 
 
@@ -167,15 +211,13 @@ h4{
 
 .container-flex-login {
 
-    /*position: absolute;*/ 
+    position: relative;
 
     flex-wrap: wrap;
 
     height: 290px;
 
-    /*width: 4000px;
-
-    flex:1 0 60%;*/
+    width: 400px;
 
     background-color: #ffffff;
 
@@ -196,10 +238,10 @@ h4{
 
 
 
-.buttcontinuar{
+/*.buttcontinuar{
     position: relative;
     box-shadow: 0px 10px 14px -7px #276873;
-    /*background:linear-gradient(to bottom, #3f3f3f 5%, #000000 100%);*/
+    background:linear-gradient(to bottom, #3f3f3f 5%, #000000 100%);
     background-color:#00bbff;
     border-radius:8px;
     display:inline-block;
@@ -215,7 +257,8 @@ h4{
     bottom: 50vh;
     right: 30px;
 
-}
+}*/
+
 
 
 body{
@@ -226,40 +269,137 @@ body{
 }
 
 
-.buttcontinuar:hover {
-    /*background:linear-gradient(to bottom, #0091ff 5%, #00bbff 100%);*/
+/*.buttcontinuar:hover {
+    background:linear-gradient(to bottom, #0091ff 5%, #00bbff 100%);
     background-color:#0091ff;
+}*/
+
+
+.animcpf {
+
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 4px;
+    display: inline-block;
+    padding-right:1px ;
+    max-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: piscacpf normal infinite  .8s, escrevercpf normal 4s steps(35) both;
+    animation-delay: 500ms;
+    
+    
+} 
+
+
+
+
+@keyframes piscacpf {
+
+    100% {
+ 
+        border-right: 1px solid rgb(0, 0, 0);
+           
+    }
 }
 
 
 
+@keyframes escrevercpf {
+
+    100%{
+        max-width: 100%;
+    }
+}  
 
 
-@media(max-width: 360px) {
+
+
+
+
+
+
+.animpsw {
+
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 4px;
+    display: inline-block;
+    padding-right:1px ;
+    max-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: piscapsw normal infinite  .8s, escreverpsw normal 4s steps(35) both;
+    animation-delay: 3s;
+} 
+
+
+
+
+@keyframes piscapsw { 
+
+    100% {
+ 
+        border-right: 1px solid rgb(0, 0, 0);   
+        
+    }
+
+}
+
+
+@keyframes escreverpsw {
+
+    100%{
+        max-width: 100%;
+    }
+}  
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width: 548px) {
 
     .container-flex {
 
-        flex-direction: row;
         width: 100%;
     }
 
 }
 
-@media(max-width:360px){
+@media(max-width:548px){
     .container-flex-login{
         width: 100%;
     }
 }
 
-@media(max-width:360px){
+@media(max-width:548px){
     #cpf {
         width: 100%;
+        margin-right: auto;
+        margin-left: auto;
     }
 }
 
-@media(max-width:360px){
+@media(max-width:548px){
     #senha {
         width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media(max-width:548px){
+    #BtnLogin {
+        margin: -15px 15px;
+        
+        
     }
 }
 
